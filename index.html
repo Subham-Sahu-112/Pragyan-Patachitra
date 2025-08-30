@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Utkalika Navbar</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Josefin+Sans:400,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome for icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="logo">
+        <img
+          src="Images/logo-removebg-preview.png"
+          alt="Utkalika Logo"
+          class="utkalika"
+        />
+      </div>
+      <div class="nav-links">
+        <a href="#">Shop</a>
+        <a href="#">Handicrafts</a>
+        <a href="#">Cotton Sarees</a>
+        <a href="#">Silk Sarees</a>
+        <a href="#">Dress Materials</a>
+      </div>
+      <a href="contact.html" class="contact-button">
+        <span class="contact"> Contact Us </span>
+      </a>
+      <div class="hamburg">
+        <span class="bar-1"></span>
+        <span class="bar-2"></span>
+        <span class="bar-3"></span>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-slider">
+        <div class="slide active">
+          <img src="Images/hero1.jpg" alt="Traditional Handicrafts" />
+          <div class="slide-content">
+            <h1>Premium Cotton Sarees</h1>
+            <p>
+              Embrace elegance with our handwoven cotton sarees, crafted with
+              love by skilled artisans
+            </p>
+            <div class="hero-buttons">
+              <a href="https://wa.me/919668703503" class="btn btn-secondary">Contact Us</a>
+            </div>
+          </div>
+        </div>
+        <div class="slide">
+          <img src="Images/hero2.jpg" alt="Cotton Sarees" />
+          <div class="slide-content">
+            <h1>Authentic Odisha Handicrafts</h1>
+            <p>
+              Discover the rich cultural heritage of Odisha through our
+              exquisite collection of traditional handicrafts
+            </p>
+            <div class="hero-buttons">
+              <a href="https://wa.me/919668703503" class="btn btn-secondary">Contact Us</a>
+            </div>
+          </div>
+        </div>
+        <div class="slide">
+          <img src="Images/hero3.jpg" alt="Silk Sarees" />
+          <div class="slide-content">
+            <h1>Luxurious Silk Collection</h1>
+            <p>
+              Experience the grandeur of traditional Odisha silk sarees, perfect
+              for special occasions
+            </p>
+            <div class="hero-buttons">
+              <a href="https://wa.me/919668703503" class="btn btn-secondary">Contact Us</a>
+            </div>
+          </div>
+        </div>
+        <div class="slide">
+          <img src="Images/hero4.jpg" alt="Dress Materials" />
+          <div class="slide-content">
+            <h1>Designer Dress Materials</h1>
+            <p>
+              Create your perfect outfit with our premium dress materials and
+              ethnic wear collection
+            </p>
+            <div class="hero-buttons">
+              <a href="https://wa.me/919668703503" class="btn btn-secondary">Contact Us</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Navigation Arrows -->
+      <button class="nav-arrow prev-arrow" id="prevBtn">
+        <i class="fas fa-chevron-left"></i>
+      </button>
+      <button class="nav-arrow next-arrow" id="nextBtn">
+        <i class="fas fa-chevron-right"></i>
+      </button>
+
+      <!-- Slide Indicators -->
+      <div class="slide-indicators">
+        <span class="indicator active" data-slide="0"></span>
+        <span class="indicator" data-slide="1"></span>
+        <span class="indicator" data-slide="2"></span>
+        <span class="indicator" data-slide="3"></span>
+      </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products-section" id="products">
+      <div class="container">
+        <h2 class="section-title">UTKALIKA'S CHANDUA CRAFT HERITAGE</h2>
+
+        <div class="products-grid">
+          <!-- Product 1 -->
+          <div class="product-card">
+            <div class="product-image">
+              <img
+                src="Images/product1.jpg"
+                alt="Floral Patterned Multicolour Chandua"
+              />
+              <div class="discount-badge">20% OFF</div>
+              <div class="product-overlay">
+                <button class="btn-view">Quick View</button>
+                <button class="btn-cart">
+                  <i class="fas fa-shopping-cart"></i>
+                </button>
+              </div>
+            </div>
+            <div class="product-info">
+              <h3>Floral Patterned Multicolour Chandua</h3>
+              <div class="price">
+                <a href="https://wa.me/919668703503"  class="sale-price">Get Price Details</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 2 -->
+          <div class="product-card">
+            <div class="product-image">
+              <img
+                src="Images/product2.jpg"
+                alt="Floral Patterned Multicolour Chandua"
+              />
+              <div class="discount-badge">20% OFF</div>
+              <div class="product-overlay">
+                <button class="btn-view">Quick View</button>
+                <button class="btn-cart">
+                  <i class="fas fa-shopping-cart"></i>
+                </button>
+              </div>
+            </div>
+            <div class="product-info">
+              <h3>Floral Patterned Multicolour Chandua</h3>
+              <div class="price">
+                <a href="https://wa.me/919668703503" class="sale-price">Get Price Details</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 3 -->
+          <div class="product-card">
+            <div class="product-image">
+              <img
+                src="Images/product3.jpg"
+                alt="Floral Patterned Multicolour Chandua"
+              />
+              <div class="discount-badge">20% OFF</div>
+              <div class="product-overlay">
+                <button class="btn-view">Quick View</button>
+                <button class="btn-cart">
+                  <i class="fas fa-shopping-cart"></i>
+                </button>
+              </div>
+            </div>
+            <div class="product-info">
+              <h3>Floral Patterned Multicolour Chandua</h3>
+              <div class="price">
+                <a href="https://wa.me/919668703503" class="sale-price">Get Price Details</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 4 -->
+          <div class="product-card">
+            <div class="product-image">
+              <img
+                src="Images/product4.jpg"
+                alt="Sri Ganesh Floral Patterned Multicolour Chandua"
+              />
+              <div class="discount-badge">20% OFF</div>
+              <div class="product-overlay">
+                <button class="btn-view">Quick View</button>
+                <button class="btn-cart">
+                  <i class="fas fa-shopping-cart"></i>
+                </button>
+              </div>
+            </div>
+            <div class="product-info">
+              <h3>Sri Ganesh Floral Patterned Multicolour Chandua</h3>
+              <div class="price">
+                <a href="https://wa.me/919668703503" class="sale-price">Get Price Details</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="section-footer">
+          <button class="btn btn-primary view-all">View All Products</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Patachitra Section -->
+    <section class="Patachitra products-section">
+      <div class="container">
+        <h2 class="section-title">
+          New Unique Pattachitra Paintings Unveiled!
+        </h2>
+
+        <div class="products-grid">
+          <!-- Product 1 -->
+          <div class="product-card">
+            <div class="product-image">
+              <img
+                src="Images/patachitra1.jpg"
+                alt="Floral Patterned Multicolour Chandua"
+              />
+              <div class="discount-badge">20% OFF</div>
+              <div class="product-overlay">
+                <button class="btn-view">Quick View</button>
+                <button class="btn-cart">
+                  <i class="fas fa-shopping-cart"></i>
+                </button>
+              </div>
+            </div>
+            <div class="product-info">
+              <h3>Floral Patterned Multicolour Chandua</h3>
+              <div class="price">
+                <a href="https://wa.me/919668703503" class="sale-price">Get Price Details</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 2 -->
+          <div class="product-card">
+            <div class="product-image">
+              <img
+                src="Images/patachitra2.jpg"
+                alt="Floral Patterned Multicolour Chandua"
+              />
+              <div class="discount-badge">20% OFF</div>
+              <div class="product-overlay">
+                <button class="btn-view">Quick View</button>
+                <button class="btn-cart">
+                  <i class="fas fa-shopping-cart"></i>
+                </button>
+              </div>
+            </div>
+            <div class="product-info">
+              <h3>Floral Patterned Multicolour Chandua</h3>
+              <div class="price">
+                <a href="https://wa.me/919668703503" class="sale-price">Get Price Details</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 3 -->
+          <div class="product-card">
+            <div class="product-image">
+              <img
+                src="Images/patachitra3.jpg"
+                alt="Floral Patterned Multicolour Chandua"
+              />
+              <div class="discount-badge">20% OFF</div>
+              <div class="product-overlay">
+                <button class="btn-view">Quick View</button>
+                <button class="btn-cart">
+                  <i class="fas fa-shopping-cart"></i>
+                </button>
+              </div>
+            </div>
+            <div class="product-info">
+              <h3>Floral Patterned Multicolour Chandua</h3>
+              <div class="price">
+                <a href="https://wa.me/919668703503" class="sale-price">Get Price Details</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 4 -->
+          <div class="product-card">
+            <div class="product-image">
+              <img
+                src="Images/hero2.jpg"
+                alt="Sri Ganesh Floral Patterned Multicolour Chandua"
+              />
+              <div class="discount-badge">20% OFF</div>
+              <div class="product-overlay">
+                <button class="btn-view">Quick View</button>
+                <button class="btn-cart">
+                  <i class="fas fa-shopping-cart"></i>
+                </button>
+              </div>
+            </div>
+            <div class="product-info">
+              <h3>Sri Ganesh Floral Patterned Multicolour Chandua</h3>
+              <div class="price">
+                <a href="https://wa.me/919668703503" class="sale-price">Get Price Details</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="section-footer">
+          <button class="btn btn-primary view-all">View All Products</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cotton Saree Collection Section -->
+    <section class="cotton-saree-section">
+      <div class="coll-container">
+        <div class="saree-header">
+          <h2 class="section-title">OUR COTTON SAREE COLLECTION</h2>
+          <p class="section-subtitle">
+            Elegant, breathable, and timeless cotton sarees collection
+          </p>
+        </div>
+
+        <div class="saree-collection">
+          <!-- Nuapatna Cotton -->
+          <div class="saree-card">
+            <div class="saree-image">
+              <img src="Images/saree1.jpg" alt="Nuapatna Cotton Saree" />
+              <div class="saree-overlay">
+                <div class="saree-content">
+                  <h3>Nuapatna</h3>
+                  <p>Cotton</p>
+                  <button class="btn-explore">Get Price Details</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bomkai Cotton -->
+          <div class="saree-card">
+            <div class="saree-image">
+              <img src="Images/saree2.jpg" alt="Bomkai Cotton Saree" />
+              <div class="saree-overlay">
+                <div class="saree-content">
+                  <h3>Bomkai</h3>
+                  <p>Cotton</p>
+                  <button class="btn-explore">Get Price Details</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Sambalpuri Cotton -->
+          <div class="saree-card">
+            <div class="saree-image">
+              <img src="Images/saree3.jpg" alt="Sambalpuri Cotton Saree" />
+              <div class="saree-overlay">
+                <div class="saree-content">
+                  <h3>Sambalpuri</h3>
+                  <p>Cotton</p>
+                  <button class="btn-explore">Get Price Details</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="section-footer">
+          <button class="btn btn-primary view-all">View All Sarees</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-header">
+          <h2>"Dedicated to support the artisans and weavers of Odisha"</h2>
+        </div>
+
+        <div class="footer-main">
+          <!-- Logo and Contact Section -->
+          <div class="footer-info">
+            <div class="footer-logo">
+              <img src="Images/logo-removebg-preview.png" alt="Utkalika Logo" />
+              <h3>Utkalika Odisha</h3>
+            </div>
+
+            <div class="contact-info">
+              <div class="contact-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <div>
+                  <h4>Address</h4>
+                  <p>Bhubaneswar, Odisha, India</p>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <i class="fas fa-phone"></i>
+                <div>
+                  <h4>Phone</h4>
+                  <p>+91 12345 67890</p>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <i class="fas fa-envelope"></i>
+                <div>
+                  <h4>Email</h4>
+                  <p>info@utkalika.com</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Social Media Section -->
+          <div class="footer-social">
+            <h4>Follow Us</h4>
+            <div class="social-icons">
+              <a href="#">
+                <i class="social-icon facebook fab fa-facebook-f"></i>
+                <p>Facebook</p>
+              </a>
+              <a href="#">
+                <i class="social-icon instagram fab fa-instagram"></i>
+                <p>Instagram</p>
+              </a>
+              <a href="#">
+                <i class="social-icon twitter fab fa-twitter"></i>
+                <p>Twitter</p>
+              </a>
+              <a href="#">
+                <i class="social-icon youtube fab fa-youtube"></i>
+                <p>YouTube</p>
+              </a>
+            </div>
+            <p class="social-text">
+              Stay connected for updates on our latest collections
+            </p>
+          </div>
+        </div>
+
+        <!-- Copyright Section -->
+        <div class="footer-bottom">
+          <div class="footer-copyright">
+            <p>© 2025, Utkalika Odisha. All rights reserved.</p>
+            <p style="font-size: 1.1rem;">
+              Celebrating Odisha’s Legacy Through Art
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Hamburger menu toggle functionality -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const hamburger = document.querySelector(".hamburg");
+        const navLinks = document.querySelector(".nav-links");
+
+        hamburger.addEventListener("click", function () {
+          this.classList.toggle("active");
+          navLinks.classList.toggle("mobile-active");
+        });
+
+        // Hero Slider Functionality
+        const slides = document.querySelectorAll(".slide");
+        const indicators = document.querySelectorAll(".indicator");
+        const prevBtn = document.getElementById("prevBtn");
+        const nextBtn = document.getElementById("nextBtn");
+        let currentSlide = 0;
+
+        // Function to show specific slide
+        function showSlide(index) {
+          // Remove active class from all slides and indicators
+          slides.forEach((slide) => slide.classList.remove("active"));
+          indicators.forEach((indicator) =>
+            indicator.classList.remove("active")
+          );
+
+          // Add active class to current slide and indicator
+          slides[index].classList.add("active");
+          indicators[index].classList.add("active");
+        }
+
+        // Next slide function
+        function nextSlide() {
+          currentSlide = (currentSlide + 1) % slides.length;
+          showSlide(currentSlide);
+        }
+
+        // Previous slide function
+        function prevSlide() {
+          currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+          showSlide(currentSlide);
+        }
+
+        // Event listeners for navigation buttons
+        nextBtn.addEventListener("click", nextSlide);
+        prevBtn.addEventListener("click", prevSlide);
+
+        // Event listeners for indicators
+        indicators.forEach((indicator, index) => {
+          indicator.addEventListener("click", () => {
+            currentSlide = index;
+            showSlide(currentSlide);
+          });
+        });
+
+        // Auto-play slider (optional - uncomment to enable)
+        setInterval(nextSlide, 5000); // Change slide every 5 seconds
+
+        // Keyboard navigation
+        document.addEventListener("keydown", (e) => {
+          if (e.key === "ArrowRight") nextSlide();
+          if (e.key === "ArrowLeft") prevSlide();
+        });
+
+        // Touch/Swipe support for mobile
+        let startX = 0;
+        let endX = 0;
+
+        const heroSection = document.querySelector(".hero");
+
+        heroSection.addEventListener("touchstart", (e) => {
+          startX = e.touches[0].clientX;
+        });
+
+        heroSection.addEventListener("touchend", (e) => {
+          endX = e.changedTouches[0].clientX;
+          handleSwipe();
+        });
+
+        function handleSwipe() {
+          const threshold = 50; // Minimum swipe distance
+          const diff = startX - endX;
+
+          if (Math.abs(diff) > threshold) {
+            if (diff > 0) {
+              nextSlide(); // Swipe left - next slide
+            } else {
+              prevSlide(); // Swipe right - previous slide
+            }
+          }
+        }
+      });
+
+      // Animated Section Titles - Intersection Observer
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: "0px 0px -50px 0px",
+      };
+
+      const titleObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+          }
+        });
+      }, observerOptions);
+
+      // Observe all section titles
+      const titles = document.querySelectorAll(".section-title");
+      titles.forEach((title) => {
+        titleObserver.observe(title);
+      });
+    </script>
+  </body>
+</html>
