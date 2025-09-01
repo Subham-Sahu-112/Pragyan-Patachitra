@@ -1,84 +1,197 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact Us</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
-    <style>
-        body {
-            background: #f6f8fc;
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-family: 'Montserrat', sans-serif;
-        }
-        .contact-card {
-            background: #fff;
-            border-radius: 20px;
-            box-shadow: 0 8px 32px rgba(80, 80, 180, 0.10), 0 1.5px 8px rgba(255, 88, 88, 0.10);
-            width: 350px;
-            padding: 2.2rem 2rem 2rem 2rem;
-            border: 1.5px solid #e3e6f0;
-        }
-        .contact-title {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: #222;
-            margin-bottom: 1.2rem;
-            text-align: center;
-        }
-        .contact-form {
-            display: flex;
-            flex-direction: column;
-            gap: 1.1rem;
-        }
-        .contact-form input,
-        .contact-form textarea {
-            padding: 0.8rem 1rem;
-            border-radius: 10px;
-            border: 1.5px solid #e3e6f0;
-            font-size: 1rem;
-            font-family: inherit;
-            background: #f6f8fc;
-            resize: none;
-        }
-        .contact-form input:focus,
-        .contact-form textarea:focus {
-            outline: none;
-            border-color: #6c63ff;
-            background: #fff;
-        }
-        .contact-form a {
-            background: linear-gradient(90deg, #6c63ff 0%, #ff4e8e 100%);
-            color: #fff;
-            text-align: center;
-            text-decoration: none;
-            border: none;
-            border-radius: 999px;
-            padding: 0.8rem 0;
-            font-size: 1.1rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: background 0.2s, transform 0.2s;
-        }
-        .contact-form a:hover {
-            background: linear-gradient(90deg, #ff4e8e 0%, #6c63ff 100%);
-            transform: translateY(-2px) scale(1.03);
-        }
-    </style>
-</head>
-<body>
-    <div class="contact-card">
-        <div class="contact-title">Contact Us</div>
-        <form class="contact-form">
-            <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Your Email" required>
-            <input type="number" placeholder="Your Mobile Number" required>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="contact.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="logo">
+        <img
+          src="Images/logo-removebg-preview.png"
+          alt="Utkalika Logo"
+          class="utkalika"
+        />
+      </div>
+      <div class="nav-links">
+        <a href="#">Shop</a>
+        <a href="#">Handicrafts</a>
+        <a href="#">Cotton Sarees</a>
+        <a href="#">Silk Sarees</a>
+        <a href="#">Dress Materials</a>
+      </div>
+      <a href="contact.html" class="contact-button">
+        <span class="contact-btn"> Contact Us </span>
+      </a>
+      <div class="hamburg">
+        <span class="bar-1"></span>
+        <span class="bar-2"></span>
+        <span class="bar-3"></span>
+      </div>
+    </nav>
+    <div class="contact">
+      <div class="contact-container">
+        <div class="contact-form">
+          <div class="contact-title">Contact Us</div>
+          <form id="contactForm">
+            <input type="text" placeholder="Your Name" required />
+            <input type="email" placeholder="Your Email" required />
+            <input type="tel" placeholder="Your Mobile Number" required />
             <textarea rows="4" placeholder="Your Message" required></textarea>
-            <a href="https://wa.me/919668703503" class="btn btn-primary">Send Message</a>
-        </form>
+            <button type="submit" class="msg-send-btn btn-primary">Send Message</button>
+          </form>
+        </div>
+        <!-- Map Section -->
+        <div class="map-section">
+          <div class="map-header">
+            <h3>Find Us on Map</h3>
+            <p>Visit our office in Bhubaneswar for in-person consultation</p>
+          </div>
+
+          <div class="map-container">
+            <div class="map-wrapper">
+              <!-- Google Maps Embedded -->
+              <iframe
+                id="map"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3744.8534567890123!2d85.9346536!3d20.4519479!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a1973e89aa68ff9%3A0x76e23203c3c9e06b!2sPrangya%20Pattachitra!5e0!3m2!1sen!2sin!4v1693574400000!5m2!1sen!2sin"
+                width="100%"
+                height="100%"
+                style="border: 0; border-radius: 1rem"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              >
+              </iframe>
+
+              <!-- Map Overlay Info -->
+              <div class="map-overlay">
+                <div class="location-info">
+                  <div class="location-icon">
+                    <i class="fas fa-map-marker-alt"></i>
+                  </div>
+                  <div class="location-details">
+                    <h4>Legalion Office</h4>
+                    <p>
+                      Plot 10/10, Anantam Residency<br />Sabar sahi,
+                      Rasulgarh<br />Bhubaneswar-751010
+                    </p>
+                    <div class="location-actions">
+                      <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3744.8534567890123!2d85.9346536!3d20.4519479!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a1973e89aa68ff9%3A0x76e23203c3c9e06b!2sPrangya%20Pattachitra!5e0!3m2!1sen!2sin!4v1693574400000!5m2!1sen!2sin"
+                        width="600"
+                        height="450"
+                        style="border: 0"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                        class="btn btn-outline btn-sm"
+                      >
+                        <i class="fas fa-external-link-alt"></i>
+                        Open in Google Maps</iframe
+                      >
+                      <button
+                        class="btn btn-primary btn-sm"
+                        onclick="getDirections()"
+                      >
+                        <i class="fas fa-route"></i>
+                        Get Directions
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-</body>
+
+    <script>
+      // Handle form submission
+      function handleFormSubmission(event) {
+        event.preventDefault(); // Prevent default form submission
+        
+        // Get form data
+        const form = event.target;
+        const name = form.querySelector('input[placeholder="Your Name"]').value;
+        const email = form.querySelector('input[placeholder="Your Email"]').value;
+        const mobile = form.querySelector('input[placeholder="Your Mobile Number"]').value;
+        const message = form.querySelector('textarea').value;
+        
+        // Validate form fields
+        if (!name || !email || !mobile || !message) {
+          alert('Please fill in all fields');
+          return;
+        }
+        
+        // Format message for WhatsApp
+        const whatsappMessage = `*New Contact Form Submission*
+        
+*Name:* ${name}
+*Email:* ${email}
+*Mobile:* ${mobile}
+*Message:* ${message}
+
+*Sent from Website Contact Form*`;
+        
+        // Encode message for URL
+        const encodedMessage = encodeURIComponent(whatsappMessage);
+        
+        // WhatsApp number (replace with your number)
+        const whatsappNumber = "919668703503";
+        
+        // Create WhatsApp URL
+        const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+        
+        // Open WhatsApp in new tab
+        window.open(whatsappURL, '_blank');
+        
+        // Clear form after submission
+        form.reset();
+        
+        // Show success message
+        alert('Redirecting to WhatsApp. Your message will be sent!');
+      }
+
+      // Get directions function
+      function getDirections() {
+        const directionsURL = "https://www.google.com/maps/dir/?api=1&destination=Prangya+Pattachitra,Bhubaneswar";
+        window.open(directionsURL, '_blank');
+      }
+
+      // Add event listener when DOM is loaded
+      document.addEventListener('DOMContentLoaded', function() {
+        const form = document.querySelector('.contact-form form');
+        form.addEventListener('submit', handleFormSubmission);
+        
+        // Also handle click on the Send Message button
+        const sendButton = form.querySelector('a[href*="wa.me"]');
+        if (sendButton) {
+          sendButton.addEventListener('click', function(event) {
+            event.preventDefault();
+            handleFormSubmission(event);
+          });
+        }
+      });
+
+      // Mobile menu toggle functionality
+      document.addEventListener('DOMContentLoaded', function() {
+        const hamburger = document.querySelector('.hamburg');
+        const navLinks = document.querySelector('.nav-links');
+        
+        if (hamburger && navLinks) {
+          hamburger.addEventListener('click', function() {
+            hamburger.classList.toggle('active');
+            navLinks.classList.toggle('mobile-active');
+          });
+        }
+      });
+    </script>
+  </body>
 </html>

@@ -680,6 +680,7 @@ body {
 
 .view-all {
   padding: 15px 40px;
+  padding-top: 20px;
   font-size: 1.1rem;
   background: #d4af37;
   color: white;
