@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Card</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Inter", sans-serif;
+        background: #f8fafc;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+      }
+
+      .product-card {
+        background: #ffffff;
+        border-radius: 20px;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        max-width: 320px;
+        padding: 20px;
+        position: relative;
+        overflow: hidden;
+        transition: all 0.3s ease;
+        border: 1px solid #e2e8f0;
+      }
+
+      .product-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+      }
+
+      .product-image {
+        width: 100%;
+        height: 140px;
+        background: #f1f5f9;
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 16px;
+        overflow: hidden;
+        position: relative;
+      }
+
+      .product-image::after {
+        content: "";
+        display: none;
+      }
+
+      .product-image img {
+        width: 80%;
+        height: 80%;
+        object-fit: contain;
+      }
+
+      .product-title {
+        font-size: 20px;
+        font-weight: 700;
+        color: #1e293b;
+        margin-bottom: 8px;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+
+      .product-category {
+        text-align: center;
+        margin-bottom: 12px;
+      }
+
+      .category-badge {
+        background: #3b82f6;
+        color: white;
+        padding: 6px 16px;
+        border-radius: 20px;
+        font-size: 11px;
+        font-weight: 700;
+        display: inline-block;
+        margin-bottom: 8px;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+
+      .seller-info {
+        font-size: 13px;
+        color: #64748b;
+        margin: 0;
+        text-align: center;
+      }
+
+      .seller-name {
+        color: #3b82f6;
+        font-weight: 600;
+      }
+
+      .product-rating {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        margin-bottom: 16px;
+      }
+
+      .stars {
+        display: flex;
+        gap: 2px;
+      }
+
+      .star {
+        color: #fbbf24;
+        font-size: 16px;
+      }
+
+      .star:nth-child(2) {
+        animation: none;
+      }
+      .star:nth-child(3) {
+        animation: none;
+      }
+      .star:nth-child(4) {
+        animation: none;
+      }
+
+      .star-empty {
+        color: #cbd5e1;
+        font-size: 16px;
+      }
+
+      .rating-score {
+        font-size: 14px;
+        color: #64748b;
+        font-weight: 600;
+        background: #f1f5f9;
+        padding: 4px 8px;
+        border-radius: 12px;
+      }
+
+      .pricing-section {
+        background: #3b82f6;
+        color: white;
+        padding: 14px 16px;
+        border-radius: 12px;
+        margin: 14px 0;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .pricing-section::before {
+        display: none;
+      }
+
+      .price-row {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        font-weight: 700;
+      }
+
+      .price-label {
+        font-size: 24px;
+      }
+
+      .price-unit {
+        font-size: 14px;
+        opacity: 0.9;
+      }
+
+      .total-price {
+        margin-top: 6px;
+        font-size: 16px;
+        opacity: 0.9;
+        font-weight: 600;
+      }
+
+      .availability-section {
+        background: #f0fdf4;
+        border: 1px solid #bbf7d0;
+        color: #16a34a;
+        border-radius: 10px;
+        padding: 12px 16px;
+        margin: 14px 0;
+        text-align: center;
+      }
+
+      .availability-info {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+      }
+
+      .availability-icon {
+        font-size: 16px;
+      }
+
+      .availability-text {
+        font-weight: 700;
+        font-size: 14px;
+      }
+
+      .quantity-section {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 16px 0;
+        padding: 12px;
+        background: #f8fafc;
+        border-radius: 10px;
+      }
+
+      .quantity-controls {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+      }
+
+      .qty-btn {
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        border: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        font-size: 14px;
+        font-weight: bold;
+      }
+
+      .qty-btn.minus {
+        background: #ef4444;
+        color: white;
+      }
+
+      .qty-btn.plus {
+        background: #3b82f6;
+        color: white;
+      }
+
+      .qty-btn:hover {
+        transform: scale(1.05);
+      }
+
+      .quantity-input {
+        width: 50px;
+        height: 36px;
+        text-align: center;
+        border: 2px solid #e2e8f0;
+        border-radius: 8px;
+        font-size: 16px;
+        font-weight: 700;
+        color: #1e293b;
+        background: white;
+      }
+
+      .quantity-input:focus {
+        outline: none;
+        border-color: #3b82f6;
+      }
+
+      .min-order {
+        background: #fbbf24;
+        color: #1e293b;
+        padding: 6px 12px;
+        border-radius: 16px;
+        font-size: 11px;
+        font-weight: 700;
+      }
+
+      .action-buttons {
+        display: flex;
+        gap: 10px;
+        margin-top: 18px;
+      }
+
+      .btn {
+        flex: 1;
+        padding: 12px;
+        border-radius: 10px;
+        font-size: 13px;
+        font-weight: 700;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        border: none;
+        text-align: center;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 6px;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+
+      .btn-primary {
+        background: #16a34a;
+        color: white;
+      }
+
+      .btn-primary:hover {
+        transform: translateY(-2px);
+        background: #15803d;
+      }
+
+      .btn-secondary {
+        background: #3b82f6;
+        color: white;
+      }
+
+      .btn-secondary:hover {
+        transform: translateY(-2px);
+        background: #2563eb;
+      }
+
+      .know-more-btn {
+        width: 100%;
+        margin-top: 12px;
+        background: transparent;
+        color: #3b82f6;
+        border: 2px solid #3b82f6;
+        font-weight: 700;
+        padding: 12px;
+      }
+
+      .know-more-btn:hover {
+        background: #3b82f6;
+        color: white;
+        transform: translateY(-2px);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="product-card">
+      <div class="product-image">
+        <img
+          src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=400&q=80"
+          alt="TMT Steel Rod"
+        />
+      </div>
+
+      <h3 class="product-title">tmt_steel_rod</h3>
+
+      <div class="product-category">
+        <span class="category-badge">TMT STEEL</span>
+        <p class="seller-info">
+          By <span class="seller-name">subankar trader</span>
+        </p>
+      </div>
+
+      <div class="product-rating">
+        <div class="stars">
+          <i class="fas fa-star star"></i>
+          <i class="fas fa-star star"></i>
+          <i class="fas fa-star star"></i>
+          <i class="fas fa-star star"></i>
+          <i class="fas fa-star star-empty"></i>
+        </div>
+        <span class="rating-score">(25)</span>
+      </div>
+
+      <div class="pricing-section">
+        <div class="price-row">
+          <span class="price-label">₹400</span>
+          <span class="price-unit">/numbers</span>
+          <span class="total-price">Total: ₹1,600</span>
+        </div>
+      </div>
+
+      <div class="availability-section">
+        <div class="availability-info">
+          <i class="fas fa-check-circle availability-icon"></i>
+          <span class="availability-text">400 available</span>
+        </div>
+      </div>
+
+      <div class="quantity-section">
+        <div class="quantity-controls">
+          <button class="qty-btn minus">
+            <i class="fas fa-minus"></i>
+          </button>
+          <input
+            type="number"
+            class="quantity-input"
+            value="4"
+            min="1"
+            max="400"
+          />
+          <button class="qty-btn plus">
+            <i class="fas fa-plus"></i>
+          </button>
+        </div>
+        <div class="min-order">
+          <span class="min-label">Min: 4</span>
+        </div>
+      </div>
+
+      <div class="action-buttons">
+        <button class="btn btn-primary">
+          <i class="fas fa-shopping-cart"></i>
+          Buy Now
+        </button>
+        <button class="btn btn-secondary">
+          <i class="fas fa-cart-plus"></i>
+          Add to Cart
+        </button>
+      </div>
+
+      <button class="btn know-more-btn">
+        <i class="fas fa-info-circle"></i>
+        Know More
+      </button>
+    </div>
+
+    <script>
+      // Quantity control functionality
+      const quantityInput = document.querySelector(".quantity-input");
+      const minusBtn = document.querySelector(".qty-btn.minus");
+      const plusBtn = document.querySelector(".qty-btn.plus");
+      const totalPriceElement = document.querySelector(".total-price");
+      const pricePerUnit = 400;
+      const minQuantity = 4;
+      const maxQuantity = 400;
+
+      function updateTotalPrice() {
+        const quantity = parseInt(quantityInput.value);
+        const total = quantity * pricePerUnit;
+        totalPriceElement.textContent = `Total: ₹${total.toLocaleString()}`;
+      }
+
+      minusBtn.addEventListener("click", () => {
+        let currentValue = parseInt(quantityInput.value);
+        if (currentValue > minQuantity) {
+          quantityInput.value = currentValue - 1;
+          updateTotalPrice();
+        }
+      });
+
+      plusBtn.addEventListener("click", () => {
+        let currentValue = parseInt(quantityInput.value);
+        if (currentValue < maxQuantity) {
+          quantityInput.value = currentValue + 1;
+          updateTotalPrice();
+        }
+      });
+
+      quantityInput.addEventListener("input", () => {
+        let value = parseInt(quantityInput.value);
+        if (isNaN(value) || value < minQuantity) {
+          quantityInput.value = minQuantity;
+        } else if (value > maxQuantity) {
+          quantityInput.value = maxQuantity;
+        }
+        updateTotalPrice();
+      });
+
+      // Button functionality
+      document.querySelectorAll(".btn").forEach((button) => {
+        button.addEventListener("click", function () {
+          const action = this.textContent.trim();
+          const quantity = parseInt(quantityInput.value);
+
+          if (action.includes("Buy Now")) {
+            alert(
+              `Buying ${quantity} TMT Steel Rods for ₹${(
+                quantity * pricePerUnit
+              ).toLocaleString()}`
+            );
+          } else if (action.includes("Add to Cart")) {
+            alert(`Added ${quantity} TMT Steel Rods to cart!`);
+            this.innerHTML = '<i class="fas fa-check"></i> Added';
+            this.style.background = "#10b981";
+            this.style.color = "white";
+
+            setTimeout(() => {
+              this.innerHTML = '<i class="fas fa-cart-plus"></i> ADD TO CART';
+              this.style.background = "";
+              this.style.color = "";
+            }, 2000);
+          } else if (action.includes("Know More")) {
+            alert("Opening TMT Steel Rod details...");
+          }
+        });
+      });
+
+      // Initialize total price
+      updateTotalPrice();
+    </script>
+  </body>
+</html>
